@@ -1,0 +1,11 @@
+<html>
+<h1>Applicaties</h1>
+
+<ul>
+    {{ range $host, $containers := groupByMulti $ "Env.VIRTUAL_HOST" "," }}
+        <li><a href="http://{{ $host }}">{{ $host }}</a></li>
+    {{ else }}
+        <b>Geen draaiende applicaties</b>
+    {{ end }}
+</ul>
+</html>
