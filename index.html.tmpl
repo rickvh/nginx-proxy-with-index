@@ -1,5 +1,5 @@
 <html>
-<h1>Applicaties</h1>
+<h1>Applications</h1>
 
 <ul>
     {{ range $host, $containers := groupByMulti $ "Env.VIRTUAL_HOST" "," }}
